@@ -9,9 +9,9 @@ function Todo(){
         setCurrentTodo(event.target.value)
     }
     const handleSubmit=()=>{
-        if(editIndex!=undefined){
+        if(editIndex!==undefined){
             const array=allTodos.map((todo,index)=>{
-                if(index==editIndex) return currentTodo;
+                if(index===editIndex) return currentTodo;
                 return todo;
             });
             setAllTodos(array)
@@ -28,7 +28,7 @@ function Todo(){
         setCurrentTodo(allTodos[index])
     }
     const handleDelete=(index)=>{
-        const fill=allTodos.filter((_,i)=>i!=index)
+        const fill=allTodos.filter((_,i)=>i!==index)
         setAllTodos(fill)
     }
 
